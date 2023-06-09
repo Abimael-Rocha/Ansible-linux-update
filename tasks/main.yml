@@ -1,0 +1,13 @@
+---
+
+- name: SYSTEMD | Restart Service 
+  ansible.builtin.systemd:
+    name: sshd
+    state: restarted
+       
+- name: YUM | Update Service
+  ansible.builtin.yum:
+    name: "*"
+    state: latest
+
+...
